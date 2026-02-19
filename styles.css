@@ -1,13 +1,13 @@
 :root {
+  --bg: #fafaf8;
+  --bg-header: #111827;
   --text: #334155;
   --heading: #0f172a;
-  --accent: #92400e;
-  --accent-light: #fef3c7;
-  --bg: #ffffff;
-  --subtle: #f8f6f3;
-  --border: #d6d3d1;
-  --link: #1e40af;
+  --accent: #0f766e;
+  --accent-bg: #f0fdfa;
+  --border: #e2e8f0;
   --muted: #64748b;
+  --link: #0f766e;
 }
 
 *,
@@ -19,18 +19,12 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  font-size: 0.925rem;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 0.9rem;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
-}
-
-main {
-  max-width: 52rem;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
 }
 
 a {
@@ -42,28 +36,31 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ── Header ───────────────────────────────────────────────── */
-
 .page-header {
+  background: var(--bg-header);
+  color: #e2e8f0;
+}
+
+.header-inner {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 2rem 1.75rem;
   text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 2px solid var(--accent);
 }
 
 .page-header h1 {
-  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--heading);
-  letter-spacing: 0.04em;
+  color: #f8fafc;
+  letter-spacing: 0.02em;
   margin-bottom: 0.15rem;
 }
 
 .tagline {
-  font-size: 1.1rem;
-  color: var(--muted);
-  font-weight: 400;
+  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 500;
   letter-spacing: 0.02em;
   margin-bottom: 0.75rem;
 }
@@ -77,14 +74,38 @@ a:hover {
 }
 
 .contact-links .location {
+  color: #94a3b8;
+}
+
+.contact-links a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1.75rem 2rem 2.5rem;
+}
+
+.summary {
+  margin-bottom: 1.75rem;
+}
+
+.summary p {
+  font-size: 0.9rem;
+  line-height: 1.65;
   color: var(--text);
 }
 
-/* ── Section Headings ─────────────────────────────────────── */
-
 section > h2 {
-  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
-  font-size: 0.8rem;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -94,32 +115,48 @@ section > h2 {
   margin-bottom: 1rem;
 }
 
-/* ── Skills ───────────────────────────────────────────────── */
-
 .skills {
   margin-bottom: 1.75rem;
 }
 
-.skills dl {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr;
-  gap: 0.3rem 1rem;
-  font-size: 0.85rem;
-  line-height: 1.5;
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.skills dt {
+.skill-group {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.skill-group h3 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 0.7rem;
   font-weight: 600;
-  color: var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  min-width: 6.5rem;
   text-align: right;
-  padding-top: 0.05rem;
+  flex-shrink: 0;
 }
 
-.skills dd {
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.skill-tags span {
+  background: var(--accent-bg);
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 2px;
   color: var(--text);
+  line-height: 1.6;
 }
-
-/* ── Experience ───────────────────────────────────────────── */
 
 .experience {
   margin-bottom: 1.75rem;
@@ -162,7 +199,7 @@ section > h2 {
 }
 
 .position-info h3 {
-  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--heading);
@@ -171,6 +208,18 @@ section > h2 {
 .role {
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.role-arrow {
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0 0.15rem;
+}
+
+.role-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
 }
 
 .dates {
@@ -194,14 +243,17 @@ section > h2 {
 }
 
 .position li::before {
-  content: "–";
+  content: "\2013";
   position: absolute;
   left: 0;
   color: var(--border);
   font-weight: 700;
 }
 
-/* ── Sub-projects (EyeCue Lab) ────────────────────────────── */
+.position li strong {
+  font-weight: 600;
+  color: var(--heading);
+}
 
 .eyecue > header {
   margin-bottom: 0.6rem;
@@ -210,7 +262,7 @@ section > h2 {
 .eyecue > .sub-project {
   margin-left: 0.5rem;
   padding-left: 1rem;
-  border-left: 2px solid var(--accent-light);
+  border-left: 2px solid var(--accent-bg);
   margin-bottom: 0.75rem;
 }
 
@@ -219,7 +271,7 @@ section > h2 {
 }
 
 .sub-info h4 {
-  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--heading);
@@ -243,14 +295,17 @@ section > h2 {
 }
 
 .sub-project li::before {
-  content: "–";
+  content: "\2013";
   position: absolute;
   left: 0;
   color: var(--border);
   font-weight: 700;
 }
 
-/* ── Projects ─────────────────────────────────────────────── */
+.sub-project li strong {
+  font-weight: 600;
+  color: var(--heading);
+}
 
 .projects {
   margin-bottom: 1.75rem;
@@ -258,6 +313,13 @@ section > h2 {
 
 .project {
   margin-bottom: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.project:first-of-type {
+  padding-top: 0;
+  border-top: none;
 }
 
 .project > header {
@@ -268,7 +330,7 @@ section > h2 {
 }
 
 .project-info h3 {
-  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--heading);
@@ -291,8 +353,6 @@ section > h2 {
   font-style: italic;
 }
 
-/* ── Education ────────────────────────────────────────────── */
-
 .education {
   margin-bottom: 1rem;
 }
@@ -306,7 +366,7 @@ section > h2 {
 }
 
 .edu-entry h3 {
-  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--heading);
@@ -317,21 +377,63 @@ section > h2 {
   color: var(--muted);
 }
 
-/* ── Print Styles ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-links {
+    gap: 0.2rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  main {
+    padding: 1.25rem 1.25rem 2rem;
+  }
+
+  .skill-group {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .skill-group h3 {
+    text-align: left;
+    min-width: unset;
+  }
+
+  .position-info,
+  .sub-info,
+  .project-info {
+    gap: 0.1rem 0.4rem;
+  }
+
+  .dates {
+    margin-left: 0;
+  }
+}
 
 @media print {
+  @page {
+    margin: 0.5in 0.6in;
+    size: letter;
+  }
+
   :root {
     --text: #1a1a1a;
     --heading: #000000;
-    --accent: #4a3728;
+    --accent: #333333;
+    --accent-bg: transparent;
     --muted: #444444;
     --border: #cccccc;
     --link: #1a1a1a;
-    --accent-light: #e8e4e0;
   }
 
   body {
-    font-size: 9.5pt;
+    font-size: 9pt;
     line-height: 1.4;
     background: white;
     color: var(--text);
@@ -348,48 +450,119 @@ section > h2 {
     text-decoration: none;
   }
 
-  .page-header {
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
+.page-header {
+    background: white;
+    color: var(--heading);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    padding: 0 0 0.5rem;
   }
 
   .page-header h1 {
     font-size: 18pt;
+    color: var(--heading);
   }
 
   .tagline {
     font-size: 10pt;
+    color: var(--muted);
     margin-bottom: 0.35rem;
   }
 
   .contact-links {
     font-size: 8pt;
     gap: 0.15rem 0.75rem;
+    color: var(--muted);
   }
 
-  section > h2 {
+  .contact-links .location,
+  .contact-links a {
+    color: var(--muted);
+  }
+
+.summary {
+    margin-bottom: 0.6rem;
+  }
+
+  .summary p {
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+
+section > h2 {
     font-size: 7.5pt;
     margin-bottom: 0.5rem;
     padding-bottom: 0.2rem;
+    break-after: avoid;
   }
 
-  .skills {
-    margin-bottom: 0.75rem;
+.skills {
+    margin-bottom: 0.6rem;
   }
 
-  .skills dl {
+  .skill-groups {
+    gap: 0.15rem;
+  }
+
+  .skill-group {
+    gap: 0.4rem;
+  }
+
+  .skill-group h3 {
+    font-size: 7pt;
+    min-width: 5rem;
+  }
+
+  .skill-tags {
+    gap: 0;
+    display: inline;
+  }
+
+  .skill-tags span {
+    background: none;
+    padding: 0;
     font-size: 8pt;
-    line-height: 1.35;
-    grid-template-columns: 6rem 1fr;
-    gap: 0.15rem 0.5rem;
+    border-radius: 0;
+    display: inline;
   }
 
-  .experience {
-    margin-bottom: 0.75rem;
+  .skill-tags span::after {
+    content: ", ";
+  }
+
+  .skill-tags span:last-child::after {
+    content: "";
+  }
+
+.experience {
+    margin-bottom: 0.6rem;
   }
 
   .position {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+.position > header,
+  .sub-project > header {
+    break-after: avoid;
+  }
+
+  .position li,
+  .sub-project li {
+    break-inside: avoid;
+  }
+
+  .sub-project {
+    break-inside: avoid;
+  }
+
+  .project {
+    break-inside: avoid;
+  }
+
+  .education {
     break-inside: avoid;
   }
 
@@ -415,7 +588,7 @@ section > h2 {
   .eyecue > .sub-project {
     margin-left: 0.25rem;
     padding-left: 0.5rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.35rem;
   }
 
   .sub-info h4 {
@@ -429,14 +602,13 @@ section > h2 {
     padding-left: 0.75rem;
   }
 
-  .projects {
-    margin-bottom: 0.75rem;
-    break-inside: avoid;
+.projects {
+    margin-bottom: 0.6rem;
   }
 
   .project {
-    margin-bottom: 0.5rem;
-    break-inside: avoid;
+    margin-bottom: 0.4rem;
+    padding-top: 0.4rem;
   }
 
   .project-info h3 {
@@ -452,11 +624,7 @@ section > h2 {
     font-size: 7.5pt;
   }
 
-  .education {
-    break-inside: avoid;
-  }
-
-  .edu-entry h3 {
+.edu-entry h3 {
     font-size: 9pt;
   }
 
@@ -464,13 +632,7 @@ section > h2 {
     font-size: 8pt;
   }
 
-  .logo {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  img {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+.logo {
+    display: none;
   }
 }

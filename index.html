@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aaron Ross — Senior Software Engineer</title>
+  <title>Aaron Ross – Senior Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <header class="page-header">
+  <header class="page-header">
+    <div class="header-inner">
       <h1>Aaron Ross</h1>
       <p class="tagline">Senior Software Engineer</p>
       <nav class="contact-links">
@@ -17,26 +20,60 @@
         <a href="https://linkedin.com/in/aaronrosspdx">linkedin.com/in/aaronrosspdx</a>
         <a href="https://anomalous.ventures">anomalous.ventures</a>
       </nav>
-    </header>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary">
+      <p>I've been a software engineer for over 7 years, working across the full stack in Python, TypeScript, and Go. Right now I'm building data quality infrastructure at Great Expectations, where the open-source library has <strong>18k+</strong> GitHub stars. I've had a client patent my algorithm, led ML platform teams, and I ship my own products on the side.</p>
+    </section>
 
     <section class="skills">
       <h2>Skills</h2>
-      <dl>
-        <dt>Languages</dt>
-        <dd>TypeScript, Go, Python, JavaScript, SQL, HTML, CSS, Bash</dd>
-        <dt>Frontend</dt>
-        <dd>React, Astro, Preact, HTMX, D3.js, Tailwind CSS, Styled Components</dd>
-        <dt>Backend</dt>
-        <dd>NestJS, Flask, FastAPI, Express, Chi, GraphQL (Apollo), gRPC, REST</dd>
-        <dt>Data</dt>
-        <dd>PostgreSQL, SQLite/Turso, Redis, SQLAlchemy, Prisma, Drizzle, SQLC, TypeORM</dd>
-        <dt>AI/ML</dt>
-        <dd>LangGraph, image segmentation (training + deployment), prompt engineering</dd>
-        <dt>Infrastructure</dt>
-        <dd>Kubernetes, Docker, GKE, Fly.io, Cloudflare Pages, GitHub Actions, CI/CD, Datadog</dd>
-        <dt>Practices</dt>
-        <dd>TDD, Agile/Scrum, Architecture Decision Records, Code Review, Mentorship</dd>
-      </dl>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span>TypeScript</span><span>Go</span><span>Python</span><span>JavaScript</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Bash</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span>React</span><span>Astro</span><span>Preact</span><span>HTMX</span><span>D3.js</span><span>Tailwind CSS</span><span>Styled Components</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span>NestJS</span><span>Flask</span><span>FastAPI</span><span>Express</span><span>Chi</span><span>GraphQL (Apollo)</span><span>gRPC</span><span>REST</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Data</h3>
+          <div class="skill-tags">
+            <span>PostgreSQL</span><span>SQLite/Turso</span><span>Redis</span><span>SQLAlchemy</span><span>Prisma</span><span>Drizzle</span><span>SQLC</span><span>TypeORM</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>AI/ML</h3>
+          <div class="skill-tags">
+            <span>LangGraph</span><span>Image Segmentation</span><span>Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Infrastructure</h3>
+          <div class="skill-tags">
+            <span>Kubernetes</span><span>Docker</span><span>GKE</span><span>Fly.io</span><span>Cloudflare Pages</span><span>GitHub Actions</span><span>CI/CD</span><span>Datadog</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Practices</h3>
+          <div class="skill-tags">
+            <span>TDD</span><span>Agile/Scrum</span><span>ADRs</span><span>Code Review</span><span>Mentorship</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="experience">
@@ -48,17 +85,16 @@
           <div class="position-info">
             <h3>Great Expectations</h3>
             <span class="role">Sr. Software Engineer</span>
-            <span class="dates">Aug 2024 — Present</span>
+            <span class="dates">Aug 2024 – Present</span>
           </div>
         </header>
         <ul>
           <li>Authored technical designs and architecture decision records for major features, then led their implementation across the full stack (React SPA, Python microservices, GraphQL APIs, open-source core library). Established API versioning and coding conventions adopted team-wide.</li>
           <li>Designed and shipped filtering and drill-down for a data quality observability dashboard, letting users scope all metrics by datasource, asset, or column. Wrote the technical design, built the backend query engine optimized for PostgreSQL row-level security, and implemented the React UI.</li>
-          <li>Added SQL Server and Microsoft Fabric as fully supported data sources end-to-end — from the open-source Python library through backend APIs to the frontend and AI agent — opening the product to a new customer segment.</li>
-          <li>Diagnosed and resolved production database performance issues, reducing query latency from 20–46s timeouts to under 400ms by rewriting SQL to defeat PostgreSQL generic-plan caching regressions under row-level security. Optimized dashboard queries by up to 1,590x through join-order and indexing changes.</li>
-          <li>Broadened an AI agent for automated data quality rule generation (LangGraph) from Snowflake-only to all supported databases. Rewrote the agent's prompt architecture, then built an automated evaluation framework — seeded Kaggle datasets, LLM-based scoring, blind A/B review scorecards — to measure prompt changes against real-world data before shipping.</li>
-          <li>Managed 5 releases of the open-source Great Expectations Python library. Contributed bug fixes, new metrics, and database compatibility improvements across Snowflake, Databricks, BigQuery, and Postgres.</li>
-          <li>Participated in on-call rotation with production ownership. Authored post-incident reports and drove reliability improvements including zero-downtime schema migrations, message queue thread-safety fixes, and structured observability across services.</li>
+          <li>Added SQL Server and Microsoft Fabric as fully supported data sources end-to-end, from the open-source Python library through backend APIs to the frontend and AI agent, opening the product to a new customer segment.</li>
+          <li>Diagnosed and resolved production database performance issues, reducing query latency from <strong>20–46s timeouts to under 400ms</strong> by rewriting SQL to defeat PostgreSQL generic-plan caching regressions under row-level security. Optimized dashboard queries by up to <strong>1,590x</strong> through join-order and indexing changes.</li>
+          <li>Broadened an AI agent for automated data quality rule generation (LangGraph) from Snowflake-only to all supported databases. Rewrote the agent's prompt architecture, then built an automated evaluation framework (seeded Kaggle datasets, LLM-based scoring, blind A/B review scorecards) to measure prompt changes against real-world data before shipping.</li>
+          <li>Managed 5 releases of the open-source Great Expectations Python library (<strong>18k+</strong> GitHub stars). Contributed bug fixes, new metrics, and database compatibility improvements across Snowflake, Databricks, BigQuery, and Postgres. Drove reliability improvements including zero-downtime schema migrations, message queue thread-safety fixes, and structured observability across services.</li>
         </ul>
       </article>
 
@@ -68,11 +104,11 @@
           <div class="position-info">
             <h3>Powur PBC</h3>
             <span class="role">Senior Software Engineer</span>
-            <span class="dates">Feb 2024 — May 2024</span>
+            <span class="dates">Feb 2024 – May 2024</span>
           </div>
         </header>
         <ul>
-          <li>Transitioned from consulting engagement to continue leading the Powur Vision solar platform. Maintained ML-powered roof detection microservices and React frontend for solar panel sales operations generating $10M+ in annual contracts.</li>
+          <li>Transitioned from consulting engagement to continue leading the Powur Vision solar platform. Maintained ML-powered roof detection microservices and React frontend for solar panel sales operations generating <strong>$10M+</strong> in annual contracts.</li>
         </ul>
       </article>
 
@@ -80,8 +116,11 @@
         <header>
           <div class="position-info">
             <h3>EyeCue Lab</h3>
-            <span class="role">Director of Engineering, Senior Principal Engineer, Principal Engineer, Software Development Manager, Software Developer, Junior Software Developer</span>
-            <span class="dates">Aug 2018 — Feb 2024</span>
+            <span class="role">
+              Junior Developer <span class="role-arrow">&rarr;</span> Director of Engineering
+              <span class="role-note">(6 titles in 5.5 years)</span>
+            </span>
+            <span class="dates">Aug 2018 – Feb 2024</span>
           </div>
         </header>
 
@@ -90,11 +129,11 @@
             <img src="img/powur.svg" alt="" class="logo" width="20" height="20">
             <div class="sub-info">
               <h4>Powur Vision</h4>
-              <span class="dates">Jan 2022 — Feb 2024</span>
+              <span class="dates">Jan 2022 – Feb 2024</span>
             </div>
           </header>
           <ul>
-            <li>Led a team of 12 building an ML-powered roof detection platform for solar panel sales, securing $10M+ in contracts. Architected microservices handling image segmentation model training, deployment, and real-time inference.</li>
+            <li>Led a team of <strong>12</strong> building an ML-powered roof detection platform for solar panel sales, securing <strong>$10M+</strong> in contracts. Architected microservices handling image segmentation model training, deployment, and real-time inference.</li>
             <li>Owned full-stack delivery across React frontend, Python ML pipeline, Node.js APIs, and Kubernetes infrastructure on GKE. Managed cross-functional workflows from product design through production monitoring.</li>
           </ul>
         </div>
@@ -104,11 +143,11 @@
             <img src="img/bd.svg" alt="" class="logo logo-wide" width="40" height="20">
             <div class="sub-info">
               <h4>BD CBA Analysis Software</h4>
-              <span class="dates">Aug 2021 — Jan 2022</span>
+              <span class="dates">Aug 2021 – Jan 2022</span>
             </div>
           </header>
           <ul>
-            <li>Sole developer of 90%+ of an Electron desktop application for clinical flow cytometry cost-benefit analysis. Built cross-platform CI/CD pipeline for automated distribution to Windows and macOS.</li>
+            <li>Sole developer of <strong>90%+</strong> of an Electron desktop application for clinical flow cytometry cost-benefit analysis. Built cross-platform CI/CD pipeline for automated distribution to Windows and macOS.</li>
           </ul>
         </div>
 
@@ -117,11 +156,11 @@
             <img src="img/bd.svg" alt="" class="logo logo-wide" width="40" height="20">
             <div class="sub-info">
               <h4>BD Research Cloud</h4>
-              <span class="dates">Sept 2019 — Aug 2021</span>
+              <span class="dates">Sept 2019 – Aug 2021</span>
             </div>
           </header>
           <ul>
-            <li>Co-invented a patented algorithm combining Min-Conflicts with genetic optimization for antibody panel design. Built the multi-tenant SaaS platform for research teams to collaboratively design and optimize experiments.</li>
+            <li>Co-invented a <strong>patented</strong> algorithm combining Min-Conflicts with genetic optimization for antibody panel design. Built the multi-tenant SaaS platform for research teams to collaboratively design and optimize experiments.</li>
           </ul>
         </div>
 
@@ -130,7 +169,7 @@
             <img src="img/flowjo.png" alt="" class="logo logo-wide" width="40" height="20">
             <div class="sub-info">
               <h4>FlowJo Hub &amp; Earlier Clients</h4>
-              <span class="dates">Aug 2018 — Sept 2019</span>
+              <span class="dates">Aug 2018 – Sept 2019</span>
             </div>
           </header>
           <ul>
@@ -196,7 +235,7 @@
       </div>
       <div class="edu-entry">
         <h3>Portland State University</h3>
-        <span class="edu-detail">2008 — 2013 · Sigma Xi research grant, mitochondrial DNA sequencing</span>
+        <span class="edu-detail">2008 – 2013 · Sigma Xi research grant, mitochondrial DNA sequencing</span>
       </div>
     </section>
   </main>
