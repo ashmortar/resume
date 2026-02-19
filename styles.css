@@ -177,6 +177,35 @@ section > h2 {
   color: var(--muted);
   text-align: right;
   padding-top: 0.2rem;
+  position: relative;
+}
+
+.entry-date::after {
+  content: "";
+  position: absolute;
+  right: -1.5rem;
+  top: 0.75rem;
+  width: 1.5rem;
+  height: 2px;
+  background: var(--border);
+}
+
+.entry-content {
+  padding-left: 1.25rem;
+}
+
+.experience {
+  position: relative;
+}
+
+.experience::after {
+  content: "";
+  position: absolute;
+  left: 9.5rem;
+  top: 2.5rem;
+  bottom: 1.75rem;
+  width: 2px;
+  background: var(--border);
 }
 
 .entry-content header {
@@ -247,11 +276,6 @@ section > h2 {
   left: 0;
   color: var(--accent);
   font-weight: 700;
-}
-
-.entry-content li strong {
-  font-weight: 600;
-  color: var(--heading);
 }
 
 .career-note {
@@ -394,7 +418,7 @@ section > h2 {
 
 @media print {
   @page {
-    margin: 0.5in 0.65in;
+    margin: 0;
     size: letter;
   }
 
@@ -407,10 +431,11 @@ section > h2 {
   }
 
   body {
-    font-size: 9pt;
-    line-height: 1.4;
+    font-size: 9.5pt;
+    line-height: 1.45;
     background: white;
     color: var(--text);
+    padding: 0.5in 0.65in;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
@@ -448,7 +473,7 @@ section > h2 {
   }
 
   .contact-links {
-    font-size: 8pt;
+    font-size: 8.5pt;
     gap: 0.15rem 0.75rem;
     color: var(--muted);
   }
@@ -463,12 +488,12 @@ section > h2 {
   }
 
   .summary p {
-    font-size: 8.5pt;
-    line-height: 1.35;
+    font-size: 9pt;
+    line-height: 1.4;
   }
 
   section > h2 {
-    font-size: 7.5pt;
+    font-size: 8pt;
     letter-spacing: 0.18em;
     margin-bottom: 0.4rem;
     padding-bottom: 0.15rem;
@@ -489,7 +514,7 @@ section > h2 {
   }
 
   .skill-group h3 {
-    font-size: 7pt;
+    font-size: 7.5pt;
     min-width: 5rem;
   }
 
@@ -501,7 +526,7 @@ section > h2 {
   .skill-tags span {
     background: none;
     padding: 0;
-    font-size: 8pt;
+    font-size: 8.5pt;
     border-radius: 0;
     display: inline;
   }
@@ -518,6 +543,12 @@ section > h2 {
     margin-bottom: 0.5rem;
   }
 
+  .experience::after {
+    left: 7.5rem;
+    top: 1.5rem;
+    bottom: 0.4rem;
+  }
+
   .timeline-entry {
     grid-template-columns: 6.5rem 1fr;
     gap: 0 1rem;
@@ -525,8 +556,14 @@ section > h2 {
   }
 
   .entry-date {
-    font-size: 7pt;
+    font-size: 7.5pt;
     padding-top: 0.15rem;
+  }
+
+  .entry-date::after {
+    right: -1rem;
+    top: 0.55rem;
+    width: 1rem;
   }
 
   .entry-content header {
@@ -535,17 +572,17 @@ section > h2 {
   }
 
   .entry-title {
-    font-size: 10pt;
+    font-size: 10.5pt;
   }
 
   .entry-meta {
-    font-size: 8pt;
+    font-size: 8.5pt;
   }
 
   .entry-content li {
-    font-size: 8pt;
-    line-height: 1.35;
-    margin-bottom: 0.12rem;
+    font-size: 8.5pt;
+    line-height: 1.4;
+    margin-bottom: 0.15rem;
     padding-left: 0.75rem;
     break-inside: avoid;
   }
@@ -557,7 +594,7 @@ section > h2 {
   .career-note {
     margin-left: 7.5rem;
     padding-left: 1rem;
-    font-size: 7.5pt;
+    font-size: 8pt;
     margin-bottom: 0.4rem;
   }
 
@@ -573,20 +610,26 @@ section > h2 {
   }
 
   .project-info h3 {
-    font-size: 9.5pt;
+    font-size: 10pt;
   }
 
   .project > p {
-    font-size: 8pt;
-    line-height: 1.35;
+    font-size: 8.5pt;
+    line-height: 1.4;
   }
 
   .tech {
+    font-size: 8pt;
+  }
+
+  .entry-content > .tech {
     font-size: 7.5pt;
+    margin-bottom: 0.1rem;
   }
 
   .print-page-break {
     break-before: page;
+    padding-top: 0.5in;
   }
 
   .education {
@@ -594,10 +637,10 @@ section > h2 {
   }
 
   .edu-entry h3 {
-    font-size: 9pt;
+    font-size: 9.5pt;
   }
 
   .edu-detail {
-    font-size: 8pt;
+    font-size: 8.5pt;
   }
 }
