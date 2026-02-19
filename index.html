@@ -79,152 +79,165 @@
     <section class="experience">
       <h2>Experience</h2>
 
-      <article class="timeline-entry">
-        <div class="entry-date">Aug 2024 – Present</div>
-        <div class="entry-content">
-          <header>
+      <div class="experience-headers">
+        <span class="experience-header">Employer</span>
+        <span class="experience-header">Work</span>
+      </div>
+
+      <div class="employer-block">
+        <div class="employer-info">
+          <div class="employer-name-row">
             <img src="img/gx.png" alt="" class="logo" width="20" height="20">
-            <div>
-              <h3 class="entry-title">Great Expectations</h3>
-              <p class="entry-meta">
-                <span class="entry-role">Sr. Software Engineer</span>
-              </p>
-            </div>
-          </header>
-          <p class="tech">Technical Design, Performance Optimization, AI Agent, Open Source</p>
-          <ul>
-            <li>Authored technical designs and ADRs for major features, then led implementation across the full stack (React SPA, Python microservices, GraphQL APIs, open-source core library). Added SQL Server and Microsoft Fabric as fully supported data sources end-to-end, opening the product to a new customer segment.</li>
-            <li>Designed and shipped filtering and drill-down for a data quality observability dashboard, letting users scope all metrics by datasource, asset, or column. Wrote the technical design, built the backend query engine optimized for PostgreSQL row-level security, and implemented the React UI.</li>
-            <li>Diagnosed and resolved production database performance issues, reducing query latency from 20–46s timeouts to under 400ms by rewriting SQL to defeat PostgreSQL generic-plan caching regressions under row-level security. Optimized dashboard queries by up to 1,590x through join-order and indexing changes.</li>
-            <li>Broadened an AI agent for automated data quality rule generation (LangGraph) from Snowflake-only to all supported databases, then built an evaluation framework to measure prompt changes against real-world data. Managed 5 releases of the open-source library (18k+ GitHub stars) with bug fixes, new metrics, and reliability improvements including zero-downtime schema migrations and message queue thread-safety fixes.</li>
-          </ul>
+            <h3 class="employer-name">Great Expectations</h3>
+          </div>
+          <p class="employer-dates">Aug 2024 – Present</p>
         </div>
-      </article>
+        <div class="employer-projects">
+          <article class="project-entry">
+            <header>
+              <img src="img/gx.png" alt="" class="logo" width="20" height="20">
+              <div>
+                <h4 class="project-title">GX Cloud &amp; OSS Library</h4>
+                <p class="project-meta">
+                  <span class="project-role">Sr. Software Engineer</span>
+                </p>
+              </div>
+            </header>
+            <p class="tech">Technical Design, Performance Optimization, AI Agent, Open Source</p>
+            <ul>
+              <li>Authored technical designs and ADRs for major features, then led implementation across the full stack (React SPA, Python microservices, GraphQL APIs, open-source core library). Added SQL Server and Microsoft Fabric as fully supported data sources end-to-end, opening the product to a new customer segment.</li>
+              <li>Designed and shipped filtering and drill-down for a data quality observability dashboard, letting users scope all metrics by datasource, asset, or column. Wrote the technical design, built the backend query engine optimized for PostgreSQL row-level security, and implemented the React UI.</li>
+              <li>Diagnosed and resolved production database performance issues, reducing query latency from 20–46s timeouts to under 400ms by rewriting SQL to defeat PostgreSQL generic-plan caching regressions under row-level security. Optimized dashboard queries by up to 1,590x through join-order and indexing changes.</li>
+              <li>Broadened an AI agent for automated data quality rule generation (LangGraph) from Snowflake-only to all supported databases, then built an evaluation framework to measure prompt changes against real-world data. Managed 5 releases of the open-source library (18k+ GitHub stars) with bug fixes, new metrics, and reliability improvements including zero-downtime schema migrations and message queue thread-safety fixes.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
 
-      <article class="timeline-entry">
-        <div class="entry-date">Feb 2024 – May 2024</div>
-        <div class="entry-content">
-          <header>
+      <div class="employer-block">
+        <div class="employer-info">
+          <div class="employer-name-row">
             <img src="img/powur.svg" alt="" class="logo" width="20" height="20">
-            <div>
-              <h3 class="entry-title">Powur PBC</h3>
-              <p class="entry-meta">
-                <span class="entry-role">Senior Software Engineer</span>
-              </p>
-            </div>
-          </header>
-          <p class="tech">Platform Leadership, Integration Maintenance</p>
-          <ul>
-            <li>Transitioned from consulting engagement to continue leading the Powur Vision solar platform. Maintained integration microservices and React frontend for the solar sales lifecycle platform generating $10M+ in annual contracts.</li>
-          </ul>
+            <h3 class="employer-name">Powur PBC</h3>
+          </div>
+          <p class="employer-dates">Feb 2024 – May 2024</p>
         </div>
-      </article>
-
-      <aside class="career-note">
-        At EyeCue Lab from Aug 2018 to Feb 2024, progressing through 6 titles from Junior Developer to Director of Engineering.
-      </aside>
-
-      <article class="timeline-entry">
-        <div class="entry-date">Jan 2022 – Feb 2024</div>
-        <div class="entry-content">
-          <header>
-            <img src="img/powur.svg" alt="" class="logo" width="20" height="20">
-            <div>
-              <h3 class="entry-title">Powur Vision</h3>
-              <p class="entry-meta">
-                <span class="entry-role">Application Architect</span>
-                <span class="entry-company">EyeCue Lab</span>
-              </p>
-            </div>
-          </header>
-          <p class="tech">Team Leadership, System Architecture, Third-Party Integrations</p>
-          <ul>
-            <li>Led a team of 12 building a solar sales lifecycle platform generating $10M+ in annual contracts. Coordinated satellite imagery from 4 providers, real-time proposal generation, financial integrations (GoodLeap, Sunlight Financial), and contracting workflows with DocuSign e-signatures.</li>
-            <li>Owned full-stack delivery across React, NestJS, Go microservices with gRPC, and Kubernetes on GKE. Built a Gateway API hub, AHJ permitting lookups via ArcGIS, and managed integrations with Aurora Solar, Nearmap, NREL, and Genability.</li>
-          </ul>
+        <div class="employer-projects">
+          <article class="project-entry">
+            <header>
+              <img src="img/powur.svg" alt="" class="logo" width="20" height="20">
+              <div>
+                <h4 class="project-title">Powur Vision</h4>
+                <p class="project-meta">
+                  <span class="project-role">Senior Software Engineer</span>
+                </p>
+              </div>
+            </header>
+            <p class="tech">Platform Leadership, Integration Maintenance</p>
+            <ul>
+              <li>Transitioned from consulting engagement to continue leading the Powur Vision solar platform. Maintained integration microservices and React frontend for the solar sales lifecycle platform generating $10M+ in annual contracts.</li>
+            </ul>
+          </article>
         </div>
-      </article>
+      </div>
 
-      <article class="timeline-entry print-page-break">
-        <div class="entry-date">2022 · 3 mos</div>
-        <div class="entry-content">
-          <header>
-            <img src="img/powur.svg" alt="" class="logo" width="20" height="20">
-            <div>
-              <h3 class="entry-title">RoofImg — Solar Automation POC</h3>
-              <p class="entry-meta">
-                <span class="entry-role">Solo Project</span>
-                <span class="entry-company">EyeCue Lab → Powur</span>
-              </p>
-            </div>
-          </header>
-          <p class="tech">Computer Vision, ML Prototyping, Research, Pipeline Design</p>
-          <ul>
-            <li>Built an end-to-end automated rooftop solar estimation pipeline as a solo 3-month prototype, taking a property address as input and returning a solar production estimate. Implemented roof plane segmentation by fine-tuning Mask R-CNN on the DeepRoof dataset (UMass/KDD '19), with guidance from direct correspondence with the lead author.</li>
-            <li>Chained satellite imagery retrieval (Google Maps API), a geometry packing algorithm for panel placement based on roof orientation, and production estimation via NREL PVWatts. POC preceded and informed the Powur Vision platform.</li>
-          </ul>
+      <div class="employer-block employer-block--multi">
+        <div class="employer-info">
+          <div class="employer-name-row">
+            <img src="img/eyecue.png" alt="" class="logo" width="20" height="20">
+            <h3 class="employer-name">EyeCue Lab</h3>
+          </div>
+          <p class="employer-dates">Aug 2018 – Feb 2024</p>
         </div>
-      </article>
+        <div class="employer-projects">
+          <article class="project-entry">
+            <header>
+              <img src="img/powur.svg" alt="" class="logo" width="20" height="20">
+              <div>
+                <h4 class="project-title">Powur Vision</h4>
+                <p class="project-meta">
+                  <span class="project-role">Architect/Director of Engineering</span>
+                  <span class="project-dates">Jan 2022 – Feb 2024</span>
+                </p>
+              </div>
+            </header>
+            <p class="tech">Team Leadership, System Architecture, Third-Party Integrations</p>
+            <ul>
+              <li>Led a team of 12 building a solar sales lifecycle platform generating $10M+ in annual contracts. Coordinated satellite imagery from 4 providers, real-time proposal generation, financial integrations (GoodLeap, Sunlight Financial), and contracting workflows with DocuSign e-signatures.</li>
+              <li>Owned full-stack delivery across React, NestJS, Go microservices with gRPC, and Kubernetes on GKE. Built a Gateway API hub, AHJ permitting lookups via ArcGIS, and managed integrations with Aurora Solar, Nearmap, NREL, and Genability.</li>
+            </ul>
+          </article>
 
-      <article class="timeline-entry">
-        <div class="entry-date">Aug 2021 – Jan 2022</div>
-        <div class="entry-content">
-          <header>
-            <img src="img/bd.svg" alt="" class="logo logo-wide" width="40" height="20">
-            <div>
-              <h3 class="entry-title">BD CBA Analysis Software</h3>
-              <p class="entry-meta">
-                <span class="entry-role">Principal Engineer</span>
-                <span class="entry-company">EyeCue Lab</span>
-              </p>
-            </div>
-          </header>
-          <p class="tech">Solo Delivery, Domain Modeling, Logistic Regression, Electron, CI/CD</p>
-          <ul>
-            <li>Sole developer of 90%+ of an Electron desktop application for clinical flow cytometry cost-benefit analysis. Built cross-platform CI/CD pipeline for automated distribution to Windows and macOS.</li>
-          </ul>
-        </div>
-      </article>
+          <article class="project-entry print-page-break">
+            <header>
+              <img src="img/powur.svg" alt="" class="logo" width="20" height="20">
+              <div>
+                <h4 class="project-title">RoofImg — Solar Automation POC</h4>
+                <p class="project-meta">
+                  <span class="project-role">Innovation Engineer</span>
+                  <span class="project-dates">2022 · 3 mos</span>
+                </p>
+              </div>
+            </header>
+            <p class="tech">Computer Vision, ML Prototyping, Research, Pipeline Design</p>
+            <ul>
+              <li>Built an end-to-end automated rooftop solar estimation pipeline as a solo 3-month prototype, taking a property address as input and returning a solar production estimate. Implemented roof plane segmentation by fine-tuning Mask R-CNN on the DeepRoof dataset (UMass/KDD '19), with guidance from direct correspondence with the lead author.</li>
+              <li>Chained satellite imagery retrieval (Google Maps API), a geometry packing algorithm for panel placement based on roof orientation, and production estimation via NREL PVWatts. POC preceded and informed the Powur Vision platform.</li>
+            </ul>
+          </article>
 
-      <article class="timeline-entry">
-        <div class="entry-date">Sept 2019 – Aug 2021</div>
-        <div class="entry-content">
-          <header>
-            <img src="img/bd.svg" alt="" class="logo logo-wide" width="40" height="20">
-            <div>
-              <h3 class="entry-title">BD Research Cloud</h3>
-              <p class="entry-meta">
-                <span class="entry-role">Lead Frontend Dev</span>
-                <span class="entry-company">EyeCue Lab</span>
-              </p>
-            </div>
-          </header>
-          <p class="tech">Algorithm Design, Patent, Multi-Tenant SaaS</p>
-          <ul>
-            <li>Co-invented a patented algorithm combining Min-Conflicts with genetic optimization for antibody panel design. Built the multi-tenant SaaS platform for research teams to collaboratively design and optimize experiments.</li>
-          </ul>
-        </div>
-      </article>
+          <article class="project-entry">
+            <header>
+              <img src="img/bd.svg" alt="" class="logo logo-wide" width="40" height="20">
+              <div>
+                <h4 class="project-title">BD CBA Analysis Software</h4>
+                <p class="project-meta">
+                  <span class="project-role">Principal Engineer</span>
+                  <span class="project-dates">Aug 2021 – Jan 2022</span>
+                </p>
+              </div>
+            </header>
+            <p class="tech">Solo Delivery, Domain Modeling, Logistic Regression, Electron, CI/CD</p>
+            <ul>
+              <li>Sole developer of 90%+ of an Electron desktop application for clinical flow cytometry cost-benefit analysis. Built cross-platform CI/CD pipeline for automated distribution to Windows and macOS.</li>
+            </ul>
+          </article>
 
-      <article class="timeline-entry">
-        <div class="entry-date">Aug 2018 – Sept 2019</div>
-        <div class="entry-content">
-          <header>
-            <img src="img/flowjo.png" alt="" class="logo logo-wide" width="40" height="20">
-            <div>
-              <h3 class="entry-title">FlowJo Hub &amp; Earlier</h3>
-              <p class="entry-meta">
-                <span class="entry-role">Frontend Developer</span>
-                <span class="entry-company">EyeCue Lab</span>
-              </p>
-            </div>
-          </header>
-          <p class="tech">Frontend, Component Libraries, Payment Integration</p>
-          <ul>
-            <li>Built React/Redux applications with component libraries (Storybook), payment integration (Stripe), and end-to-end testing frameworks. Progressed from junior developer to software developer through rapid delivery across multiple client engagements.</li>
-          </ul>
+          <article class="project-entry">
+            <header>
+              <img src="img/bd.svg" alt="" class="logo logo-wide" width="40" height="20">
+              <div>
+                <h4 class="project-title">BD Research Cloud</h4>
+                <p class="project-meta">
+                  <span class="project-role">Lead Frontend Dev</span>
+                  <span class="project-dates">Sept 2019 – Aug 2021</span>
+                </p>
+              </div>
+            </header>
+            <p class="tech">Algorithm Design, Patent, Multi-Tenant SaaS</p>
+            <ul>
+              <li>Co-invented a patented algorithm combining Min-Conflicts with genetic optimization for antibody panel design. Built the multi-tenant SaaS platform for research teams to collaboratively design and optimize experiments.</li>
+            </ul>
+          </article>
+
+          <article class="project-entry">
+            <header>
+              <img src="img/flowjo.png" alt="" class="logo logo-wide" width="40" height="20">
+              <div>
+                <h4 class="project-title">FlowJo Hub &amp; Earlier</h4>
+                <p class="project-meta">
+                  <span class="project-role">Frontend Developer</span>
+                  <span class="project-dates">Aug 2018 – Sept 2019</span>
+                </p>
+              </div>
+            </header>
+            <p class="tech">Frontend, Component Libraries, Payment Integration</p>
+            <ul>
+              <li>Built React/Redux applications with component libraries (Storybook), payment integration (Stripe), and end-to-end testing frameworks. Progressed from junior developer to software developer through rapid delivery across multiple client engagements.</li>
+            </ul>
+          </article>
         </div>
-      </article>
+      </div>
     </section>
 
     <section class="projects">
