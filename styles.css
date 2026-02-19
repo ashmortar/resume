@@ -1,0 +1,476 @@
+:root {
+  --text: #334155;
+  --heading: #0f172a;
+  --accent: #92400e;
+  --accent-light: #fef3c7;
+  --bg: #ffffff;
+  --subtle: #f8f6f3;
+  --border: #d6d3d1;
+  --link: #1e40af;
+  --muted: #64748b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.page-header h1 {
+  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--heading);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.15rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+.contact-links .location {
+  color: var(--text);
+}
+
+/* ── Section Headings ─────────────────────────────────────── */
+
+section > h2 {
+  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Skills ───────────────────────────────────────────────── */
+
+.skills {
+  margin-bottom: 1.75rem;
+}
+
+.skills dl {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.3rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.skills dt {
+  font-weight: 600;
+  color: var(--heading);
+  text-align: right;
+  padding-top: 0.05rem;
+}
+
+.skills dd {
+  color: var(--text);
+}
+
+/* ── Experience ───────────────────────────────────────────── */
+
+.experience {
+  margin-bottom: 1.75rem;
+}
+
+.position {
+  margin-bottom: 1.25rem;
+}
+
+.position > header,
+.sub-project > header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.position > header {
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 0;
+  border-radius: 3px;
+  object-fit: contain;
+}
+
+.logo-wide {
+  object-fit: contain;
+}
+
+.position-info,
+.sub-info,
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.6rem;
+}
+
+.position-info h3 {
+  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.role {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.dates {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.position ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.position li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.position li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--border);
+  font-weight: 700;
+}
+
+/* ── Sub-projects (EyeCue Lab) ────────────────────────────── */
+
+.eyecue > header {
+  margin-bottom: 0.6rem;
+}
+
+.eyecue > .sub-project {
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent-light);
+  margin-bottom: 0.75rem;
+}
+
+.sub-project:last-child {
+  margin-bottom: 0;
+}
+
+.sub-info h4 {
+  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.sub-info .dates {
+  font-size: 0.78rem;
+}
+
+.sub-project ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sub-project li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.sub-project li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--border);
+  font-weight: 700;
+}
+
+/* ── Projects ─────────────────────────────────────────────── */
+
+.projects {
+  margin-bottom: 1.75rem;
+}
+
+.project {
+  margin-bottom: 1rem;
+}
+
+.project > header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.project-info h3 {
+  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.project-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.project > p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin-bottom: 0.2rem;
+}
+
+.tech {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── Education ────────────────────────────────────────────── */
+
+.education {
+  margin-bottom: 1rem;
+}
+
+.edu-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.1rem 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.edu-entry h3 {
+  font-family: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.edu-detail {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ── Print Styles ─────────────────────────────────────────── */
+
+@media print {
+  :root {
+    --text: #1a1a1a;
+    --heading: #000000;
+    --accent: #4a3728;
+    --muted: #444444;
+    --border: #cccccc;
+    --link: #1a1a1a;
+    --accent-light: #e8e4e0;
+  }
+
+  body {
+    font-size: 9.5pt;
+    line-height: 1.4;
+    background: white;
+    color: var(--text);
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .page-header {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 18pt;
+  }
+
+  .tagline {
+    font-size: 10pt;
+    margin-bottom: 0.35rem;
+  }
+
+  .contact-links {
+    font-size: 8pt;
+    gap: 0.15rem 0.75rem;
+  }
+
+  section > h2 {
+    font-size: 7.5pt;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .skills {
+    margin-bottom: 0.75rem;
+  }
+
+  .skills dl {
+    font-size: 8pt;
+    line-height: 1.35;
+    grid-template-columns: 6rem 1fr;
+    gap: 0.15rem 0.5rem;
+  }
+
+  .experience {
+    margin-bottom: 0.75rem;
+  }
+
+  .position {
+    margin-bottom: 0.6rem;
+    break-inside: avoid;
+  }
+
+  .position-info h3 {
+    font-size: 10pt;
+  }
+
+  .role {
+    font-size: 8pt;
+  }
+
+  .dates {
+    font-size: 7.5pt;
+  }
+
+  .position li {
+    font-size: 8.5pt;
+    line-height: 1.35;
+    margin-bottom: 0.15rem;
+    padding-left: 0.75rem;
+  }
+
+  .eyecue > .sub-project {
+    margin-left: 0.25rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .sub-info h4 {
+    font-size: 9pt;
+  }
+
+  .sub-project li {
+    font-size: 8pt;
+    line-height: 1.35;
+    margin-bottom: 0.1rem;
+    padding-left: 0.75rem;
+  }
+
+  .projects {
+    margin-bottom: 0.75rem;
+    break-inside: avoid;
+  }
+
+  .project {
+    margin-bottom: 0.5rem;
+    break-inside: avoid;
+  }
+
+  .project-info h3 {
+    font-size: 9.5pt;
+  }
+
+  .project > p {
+    font-size: 8pt;
+    line-height: 1.35;
+  }
+
+  .tech {
+    font-size: 7.5pt;
+  }
+
+  .education {
+    break-inside: avoid;
+  }
+
+  .edu-entry h3 {
+    font-size: 9pt;
+  }
+
+  .edu-detail {
+    font-size: 8pt;
+  }
+
+  .logo {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  img {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

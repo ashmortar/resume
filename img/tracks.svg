@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Tracks logo">
+  <style>
+    .frame { fill: none; stroke: #C0C7CE; stroke-width: 10; }
+    .insert { fill: #FFFFFF; opacity: .35; }
+  </style>
+  <rect x="16" y="16" width="224" height="224" rx="24" ry="24" class="frame"/>
+  <g>
+    <rect x="32" y="32"  width="192" height="40" rx="14" ry="14" fill="#7C3AED"/>
+    <rect x="32" y="83"  width="192" height="40" rx="14" ry="14" fill="#72CE9B"/>
+    <rect x="32" y="134" width="192" height="40" rx="14" ry="14" fill="#60A5FA"/>
+    <rect x="32" y="185" width="192" height="40" rx="14" ry="14" fill="#E879F9"/>
+  </g>
+  <g>
+    <rect x="55"  y="92"  width="45" height="23" rx="6" ry="6" class="insert"/>
+    <rect x="148" y="92"  width="50" height="23" rx="6" ry="6" class="insert"/>
+    <rect x="42"  y="143" width="62" height="23" rx="6" ry="6" class="insert"/>
+    <rect x="165" y="143" width="40" height="23" rx="6" ry="6" class="insert"/>
+    <rect x="70"  y="194" width="35" height="23" rx="6" ry="6" class="insert"/>
+    <rect x="145" y="194" width="48" height="23" rx="6" ry="6" class="insert"/>
+  </g>
+  <g>
+    <path d="M 59 40 L 125 40 C 105 42, 106 64, 105 64 L 59 64 L 59 40 Z"
+          fill="#FF7F2A" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.35"/>
+    <path d="M 197 40 L 197 64 L 140 64 L 140 217 L 116 217 L 116 64 C 122 38, 140 40, 197 40 Z"
+          fill="#FF7F2A" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.35"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" role="img" aria-label="Powur logo">
+  <style>.pw{fill:#F97316;}</style>
+  <g>
+    <polygon class="pw" points="0,15 4.4,19.4 4.4,10.6"/>
+    <polygon class="pw" points="30,15 25.6,10.6 25.6,19.4"/>
+    <polygon class="pw" points="15,0 10.6,4.4 19.4,4.4"/>
+    <polygon class="pw" points="15,30 19.4,25.6 10.6,25.6"/>
+    <polygon class="pw" points="4.4,25.6 10.6,25.6 4.4,19.4"/>
+    <polygon class="pw" points="4.4,4.4 4.4,10.6 10.6,4.4"/>
+    <polygon class="pw" points="25.6,19.4 19.4,25.6 25.6,25.6"/>
+    <polygon class="pw" points="25.6,4.4 19.4,4.4 25.6,10.6"/>
+  </g>
+  <polygon class="pw" points="15,15 15,21.2 21.2,15"/>
+  <polygon class="pw" points="15,8.8 8.8,15 15,15"/>
+</svg>
